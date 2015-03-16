@@ -1,0 +1,9 @@
+{% if need_list %}
+    <ul>
+    {% for need in need_list %}
+        <li><a href="{% url 'detail' need.id %}">{{ need.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No one has needs!</p>
+{% endif %}

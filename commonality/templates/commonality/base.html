@@ -1,9 +1,15 @@
-{% if need_list %}
-    <ul>
-    {% for need in need_list %}
-        <li><a href="{% url 'detail' need.id %}">{{ need.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No one has needs!</p>
-{% endif %}
+<!doctype html>
+<html>
+<head>
+	<title>All Things in Common</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+{% block content %}
+{% endblock content %}
+
+</body>
+</html>

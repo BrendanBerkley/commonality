@@ -1,0 +1,11 @@
+	{% extends "commonality/base.html" %}
+
+{% block content %}
+<form action="{% url 'post-submit' %}" method="post">
+    {% csrf_token %}
+    <ul class="list-unstyled">
+    {{ form.as_ul }}
+    <li><input type="submit" value="Sub-MIT!" /></li>
+    </ul>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "commonality/base.html" %}
+
+{% block content %}
+    {% if need_list %}
+        <ul class="list-unstyled">
+        {% for need in need_list %}
+            <li><a href="{% url 'detail' need.id %}">{{ need.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No one has needs!</p>
+    {% endif %}
+
+    <a href="{% url 'post' %}" />Submit a need</a>
+{% endblock %}
